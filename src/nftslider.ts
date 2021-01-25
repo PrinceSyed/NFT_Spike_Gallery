@@ -84,7 +84,7 @@ const swapNFTEntity = new Entity()
 
 // NOTE: Using the scale instead of the visibility to turn the NFT on / off 
 // as there are issues with the colliders getting in the way of each other
-// when the user tries to click on an NFT to get more information...
+// when the user tries to click on an NFT to get more information.....
 swapNFTEntity.addComponent(
   new utils.Interval(8000, () => {
     for (let i = 0; i < nfts.length; i++) {
