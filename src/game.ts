@@ -18,3 +18,31 @@ baseScene.addComponentOrReplace(new Transform({
 }));
 
 nftslider();
+
+
+const entity = new Entity()
+engine.addEntity(entity)
+
+const shapeComponent = new NFTShape(
+  "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/30"
+)
+entity.addComponent(shapeComponent);
+entity.addComponent(
+  new Transform({
+    position: new Vector3(4, 1.5, 4),
+  })
+
+
+)
+
+entity.addComponent(
+  new OnPointerDown((e) => {
+    openNFTDialog(
+      "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/30"
+    )
+  })
+)
+
+
+engine.addEntity(entity)
+
