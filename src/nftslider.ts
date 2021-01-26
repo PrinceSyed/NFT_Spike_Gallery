@@ -10,7 +10,7 @@ const canvas = new UICanvas()
 const infoPanel = new InfoPanel(canvas)
 
 // NFTs
-const makersPlaceNFT = new NFT(
+const nft1 = new NFT(
   new NFTShape("ethereum://" + data[0].address),
   new Transform({
     position: new Vector3(5, 2.5, 13),
@@ -21,7 +21,7 @@ const makersPlaceNFT = new NFT(
   infoPanel
 )
 
-const cryptoKittiesNFT = new NFT(
+const nft2 = new NFT(
   new NFTShape("ethereum://" + data[1].address),
   new Transform({
     position: new Vector3(8, 2.5, 13),
@@ -32,7 +32,7 @@ const cryptoKittiesNFT = new NFT(
   infoPanel
 )
 
-const knownOriginNFT = new NFT(
+const nft3 = new NFT(
   new NFTShape("ethereum://" + data[2].address),
   new Transform({
     position: new Vector3(11, 2.5, 13),
@@ -43,19 +43,19 @@ const knownOriginNFT = new NFT(
   infoPanel
 )
 
-const axieInfinityNFT = new NFT(
+const nft4 = new NFT(
   new NFTShape("ethereum://" + data[3].address),
   new Transform({
     position: new Vector3(5, 2.5, 13),
-    scale: new Vector3(5, 5, 5),
+    scale: new Vector3(4, 4, 4),
   }),
   new Color3(1.5, 0.8, 0.8),
   data[3].id,
   infoPanel
 )
-axieInfinityNFT.getComponent(Transform).scale.setAll(0)
+nft4.getComponent(Transform).scale.setAll(0)
 
-const chainGuardiansNFT = new NFT(
+const nft5 = new NFT(
   new NFTShape("ethereum://" + data[4].address),
   new Transform({
     position: new Vector3(8, 2.5, 13),
@@ -65,9 +65,9 @@ const chainGuardiansNFT = new NFT(
   data[4].id,
   infoPanel
 )
-chainGuardiansNFT.getComponent(Transform).scale.setAll(0)
+nft5.getComponent(Transform).scale.setAll(0)
 
-const myCryptoHeroesNFT = new NFT(
+const nft6 = new NFT(
   new NFTShape("ethereum://" + data[5].address),
   new Transform({
     position: new Vector3(11, 2.5, 13),
@@ -77,9 +77,9 @@ const myCryptoHeroesNFT = new NFT(
   data[5].id,
   infoPanel
 )
-myCryptoHeroesNFT.getComponent(Transform).scale.setAll(0)
+nft6.getComponent(Transform).scale.setAll(0)
 
-const nfts: NFT[] = [makersPlaceNFT, cryptoKittiesNFT, knownOriginNFT, axieInfinityNFT, chainGuardiansNFT, myCryptoHeroesNFT]
+const nfts: NFT[] = [nft1, nft2, nft3, nft4, nft5, nft6]
 const swapNFTEntity = new Entity()
 
 // NOTE: Using the scale instead of the visibility to turn the NFT on / off 

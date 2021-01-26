@@ -7,7 +7,7 @@ export const data = [
     details: { info: "Creator: Spike", fontSize: 18 },
     directLink: {
       link:
-        "https://app.rarible.com/token:0xd07dc4262bcdbf85190c01c996b4c06a461d2430/37195",
+        "https://app.rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:37195",
       fontSize: 12,
     },
     address: "0xd07dc4262bcdbf85190c01c996b4c06a461d2430/37195",
@@ -22,7 +22,7 @@ export const data = [
       link: "https://app.rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:33358",
       fontSize: 12,
     },
-    address: "0xd07dc4262bcdbf85190c01c996b4c06a461d2430:33358",
+    address: "0xd07dc4262bcdbf85190c01c996b4c06a461d2430/33358",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ export const data = [
       link: "https://app.rarible.com/token/0xe39a238d74bdd95a895026fc25ec97fb8a4b1959:30",
       fontSize: 12,
     },
-    address: "0xe39a238d74bdd95a895026fc25ec97fb8a4b1959:30",
+    address: "0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/30",
   },
   {
     id: 5,
@@ -70,6 +70,6 @@ export const data = [
       link: "https://app.rarible.com/token/0xe39a238d74bdd95a895026fc25ec97fb8a4b1959:37",
       fontSize: 12,
     },
-    address: "0xe39a238d74bdd95a895026fc25ec97fb8a4b1959:37",
+    address: "0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/37",
   },
 ]
