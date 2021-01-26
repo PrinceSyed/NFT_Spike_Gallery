@@ -9,7 +9,7 @@ const baseScene = new Entity();
 
 engine.addEntity(baseScene)
 
-baseScene.addComponent(new GLTFShape("models/spike gallery v3.4.glb"));
+baseScene.addComponent(new GLTFShape("models/spike gallery v3.5.glb"));
 
 baseScene.addComponentOrReplace(new Transform({
   position: new Vector3(8, 0, 8),

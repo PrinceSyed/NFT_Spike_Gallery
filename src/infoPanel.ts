@@ -5,9 +5,10 @@ export class InfoPanel {
   private dropShadow: UIImage
   private mainPanel: UIImage
   private nftImage: UIImage
+  private ctaButton: UIImage
   private nftType: UIText
   private nftTitle: UIText
-  private nftDetails: UIText
+  // private nftDetails: UIText
   private nftDirectLink: UIText
   private sound: Entity = new Entity()
 
@@ -69,8 +70,8 @@ export class InfoPanel {
       this.container,
       new Texture("images/mainPanel.png") // Default image if nothing is found ...
     )
-    this.nftImage.sourceWidth = 1024
-    this.nftImage.sourceHeight = 1024
+    this.nftImage.sourceWidth = 600
+    this.nftImage.sourceHeight = 600
     this.nftImage.width = 384
     this.nftImage.height = 384
     this.nftImage.visible = false
@@ -91,17 +92,31 @@ export class InfoPanel {
       this.closeInfoPanel()
     })
 
-    // NFT Details
-    this.nftDetails = new UIText(this.container)
-    this.nftDetails.adaptWidth = true
-    this.nftDetails.hAlign = "center"
-    this.nftDetails.vAlign = "center"
-    this.nftDetails.positionY = -208
-    this.nftDetails.fontSize = 18
-    this.nftDetails.fontWeight = "bold"
-    this.nftDetails.color = Color4.Black()
-    this.nftDetails.value = "Not Found"
-    this.nftDetails.visible = false
+     // CTA Bottom on bottom
+     this.ctaButton = new UIImage(
+      this.container,
+      new Texture("images/button.png")
+    )
+    this.ctaButton.sourceWidth = 202
+    this.ctaButton.sourceHeight = 68
+    this.ctaButton.width = 141
+    this.ctaButton.height = 47
+    this.ctaButton.positionX = -125
+    this.ctaButton.positionY = -250
+    this.ctaButton.isPointerBlocker = true
+
+
+    // // NFT Details
+    // this.nftDetails = new UIText(this.container)
+    // this.nftDetails.adaptWidth = true
+    // this.nftDetails.hAlign = "center"
+    // this.nftDetails.vAlign = "center"
+    // this.nftDetails.positionY = -208
+    // this.nftDetails.fontSize = 18
+    // this.nftDetails.fontWeight = "bold"
+    // this.nftDetails.color = Color4.Black()
+    // this.nftDetails.value = "Not Found"
+    // this.nftDetails.visible = false
 
     // NFT Direct Link
     this.nftDirectLink = new UIText(this.container)
@@ -112,7 +127,6 @@ export class InfoPanel {
     this.nftDirectLink.fontSize = 10
     this.nftDirectLink.fontWeight = "normal"
     this.nftDirectLink.color = Color4.Black()
-    this.nftDirectLink.value = "Not Found"
     this.nftDirectLink.visible = false
 
     // Sound
@@ -136,15 +150,19 @@ export class InfoPanel {
         this.nftType.value = data[i].type
         this.nftTitle.value = data[i].title
         this.nftImage.source = new Texture(data[i].images)
+        this.ctaButton.source =  new Texture("images/button.png")
 
-        this.nftImage.onClick = new OnClick(() => {
+        // this.nftImage.onClick = new OnClick(() => {
+        //   openExternalURL(data[i].directLink.link)
+        // })
+
+        this.ctaButton.onClick = new OnClick(() => {
           openExternalURL(data[i].directLink.link)
         })
       
-        this.nftDetails.value = data[i].details.info
-        this.nftDetails.fontSize = data[i].details.fontSize
-        this.nftDirectLink.value = data[i].directLink.link
-        this.nftDirectLink.fontSize = data[i].directLink.fontSize
+        // this.nftDetails.value = data[i].details.info
+        // this.nftDetails.fontSize = data[i].details.fontSize
+
 
       }
     }
@@ -153,7 +171,7 @@ export class InfoPanel {
     this.nftType.visible = true
     this.nftTitle.visible = true
     this.nftImage.visible = true
-    this.nftDetails.visible = true
+    this.nftDetails.visible = false
     this.nftDirectLink.visible = true
   }
 
