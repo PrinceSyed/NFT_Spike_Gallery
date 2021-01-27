@@ -13,9 +13,9 @@
   "tags": [],
   "scene": {
     "parcels": [
-      "0,0"
+      "24,86"
     ],
-    "base": "0,0"
+    "base": "24,86"
   },
   "communications": {
     "type": "webrtc",

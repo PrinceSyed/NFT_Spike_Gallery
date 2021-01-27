@@ -15,11 +15,11 @@ export class NFT extends Entity {
     engine.addEntity(this)
     this.addComponent(nft)
     this.addComponent(transform)
-    this.originalScale = new Vector3(
-      transform.scale.x,
-      transform.scale.y,
-      transform.scale.z
-    )
+    // this.originalScale = new Vector3(
+    //   transform.scale.x,
+    //   transform.scale.y,
+    //   transform.scale.z
+    // )
     this.getComponent(NFTShape).color = color
     this.id = id
 
@@ -34,7 +34,8 @@ export class NFT extends Entity {
       new OnPointerDown(
         (): void => {
           this.getComponent(AudioSource).playOnce()
-          infoPanel.openInfoPanel(this.id)
+          infoPanel.openNFTDialog(this.id)
+
         },
         {
           button: ActionButton.POINTER,
