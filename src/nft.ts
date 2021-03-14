@@ -1,10 +1,10 @@
 
 export function NftGallery():void {
-  // NFT #1 AAVe --------------------------------------------------------------------------------|
+  // NFT #1 The Aftermath  --------------------------------------------------------------------------------|
 
 const nft1 = new Entity()
 const nft1shape = new NFTShape(
-  "ethereum://0xd07dc4262bcdbf85190c01c996b4c06a461d2430/37195",
+  "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144",
   {
     // color: Color3.Green(),
     style: PictureFrameStyle.Gold_Edges,
@@ -21,7 +21,7 @@ nft1.addComponent(
 nft1.addComponent(
   new OnPointerDown((e) => {
     openNFTDialog(
-      "ethereum://0xd07dc4262bcdbf85190c01c996b4c06a461d2430/37195"
+      "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144"
     )
   })
 )
@@ -140,11 +140,11 @@ nft5.addComponent(
 engine.addEntity(nft5)
 
 
-// NFT #6 Unisuit --------------------------------------------------------------------------------|
+// NFT #6 Astro Aavenger  --------------------------------------------------------------------------------|
 
 const nft6 = new Entity()
 const nft6shape = new NFTShape(
-  "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/140"
+  "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f:110"
   {
     // color: Color3.Green(),
     style: PictureFrameStyle.Gold_Edges,
@@ -161,7 +161,7 @@ nft6.addComponent(
 nft6.addComponent(
   new OnPointerDown((e) => {
     openNFTDialog(
-      "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/140"
+      "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f:110"
     )
   })
 )

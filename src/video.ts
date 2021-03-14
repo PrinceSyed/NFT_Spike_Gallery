@@ -30,6 +30,6 @@ const myVideoClip = new VideoClip(
   engine.addEntity(screen)
   
   
-  myVideoTexture.playing = false
+  myVideoTexture.playing = true
 
 }
