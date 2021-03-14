@@ -18,5 +18,5 @@ baseScene.addComponentOrReplace(new Transform({
 
 
 NftGallery();
-Video();
+// Video();
 

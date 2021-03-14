@@ -1,10 +1,10 @@
 
 export function NftGallery():void {
-  // NFT #1 The Aftermath  --------------------------------------------------------------------------------|
+  // NFT #1 Stani Space Racer  --------------------------------------------------------------------------------|
 
 const nft1 = new Entity()
 const nft1shape = new NFTShape(
-  "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144",
+  "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f/152",
   {
     // color: Color3.Green(),
     style: PictureFrameStyle.Gold_Edges,
@@ -21,7 +21,7 @@ nft1.addComponent(
 nft1.addComponent(
   new OnPointerDown((e) => {
     openNFTDialog(
-      "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144"
+      "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f/152"
     )
   })
 )
@@ -144,7 +144,7 @@ engine.addEntity(nft5)
 
 const nft6 = new Entity()
 const nft6shape = new NFTShape(
-  "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f:110"
+  "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f/110"
   {
     // color: Color3.Green(),
     style: PictureFrameStyle.Gold_Edges,
@@ -161,9 +161,39 @@ nft6.addComponent(
 nft6.addComponent(
   new OnPointerDown((e) => {
     openNFTDialog(
-      "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f:110"
+      "ethereum://0x63174fa9680c674a5580f7d747832b2a2133ad8f/110"
     )
   })
 )
 engine.addEntity(nft6)
 }
+
+
+
+// NFT #7 Featured  --------------------------------------------------------------------------------|
+
+const nft6 = new Entity()
+const nft6shape = new NFTShape(
+  "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144"
+  {
+    // color: Color3.Green(),
+    style: PictureFrameStyle.Gold_Edges,
+  }
+)
+nft6.addComponent(nft6shape)
+nft6.addComponent(
+  new Transform({
+    position: new Vector3(15, 5, 8),
+    scale: new Vector3(-8, -8, -8),
+    rotation: Quaternion.Euler(180, -90, 0),
+  })
+)
+
+nft6.addComponent(
+  new OnPointerDown((e) => {
+    openNFTDialog(
+      "ethereum://0xe39a238d74bdd95a895026fc25ec97fb8a4b1959/144"
+    )
+  })
+)
+engine.addEntity(nft6)
